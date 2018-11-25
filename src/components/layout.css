@@ -77,6 +77,26 @@ body.zachandemily .navbar-default .navbar-nav>li>a:hover {
 .cursive {
   font-family: 'Dancing Script', cursive;
 }
+
+.main-image-full {
+  display: none;
+}
+.main-image-cropped {
+  display: block;
+}
+@media (min-width: 768px) {
+  .main-image-full {
+    display: block;
+  }
+  .main-image-cropped {
+    display: none;
+  }
+  .main-image-container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
 body {
   margin: 0;
 }

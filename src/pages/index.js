@@ -7,11 +7,8 @@ import Image from '../components/image'
 const IndexPage = () => (
   <Layout>
     <Row>
-      <Col xs={8} xsOffset={2}>
-        <div style={{
-          paddingLeft: 36,
-          paddingRight: 36
-        }}>
+      <Col xs={12} sm={10} smOffset={1} md={8} mdOffset={2}>
+        <div className="main-image-container">
           <div style={{
             border: '1px solid #cfcfd0',
             marginBottom: '30px'

@@ -17,7 +17,14 @@ const Image = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "index.png" }) {
+        fullImage: file(relativePath: { eq: "index.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 960) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        },
+        croppedImage: file(relativePath: { eq: "index-cropped.png" }) {
           childImageSharp {
             fluid(maxWidth: 960) {
               ...GatsbyImageSharpFluid
@@ -26,7 +33,12 @@ const Image = () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => (
+      <div>
+        <Img className="main-image-full" fluid={data.fullImage.childImageSharp.fluid} />
+        <Img className="main-image-cropped" fluid={data.croppedImage.childImageSharp.fluid} />
+      </div>
+    )}
   />
 )
 export default Image
