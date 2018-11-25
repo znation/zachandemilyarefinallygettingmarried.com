@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { Grid } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 import Header from './header'
 import './layout.css'
@@ -46,3 +46,13 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+export const PageLayout = ({ children }) => (
+  <Layout>
+    <Row>
+      <Col xs={12} sm={10} smOffset={1}>
+        {children}
+      </Col>
+    </Row>
+  </Layout>
+)
