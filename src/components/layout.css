@@ -21,6 +21,15 @@ body.zachandemily .navbar-default .navbar-toggle {
   position: revert;
   display: block;
 }
+body.zachandemily .navbar-default .navbar-toggle .icon-bar {
+  margin-left: auto;
+  margin-right: auto;
+}
+body.zachandemily .navbar-default .navbar-toggle:last-child:after {
+  content: "Menu";
+  display: block;
+  padding-top: 8px;
+}
 @media (min-width: 768px) {
   body.zachandemily .navbar-default .navbar-toggle {
     display: none;
