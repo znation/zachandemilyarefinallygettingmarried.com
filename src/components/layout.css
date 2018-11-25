@@ -14,8 +14,46 @@ body.zachandemily a:hover {
   /* turn off underline */
   text-decoration: none;
 }
-.headerlink {
-  display: inline-block;
+body.zachandemily .navbar-default .navbar-toggle {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  position: revert;
+  display: block;
+}
+@media (min-width: 768px) {
+  body.zachandemily .navbar-default .navbar-toggle {
+    display: none;
+  }
+  body.zachandemily .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  body.zachandemily .navbar-nav>li {
+    display: inline-block;
+    float: none;
+    margin-bottom: 0;
+  }
+  body.zachandemily .navbar .navbar-collapse {
+    display: flex !important;
+    text-align: center;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 36px;
+    white-space: nowrap;
+  }
+  body.zachandemily .navbar {
+    margin-bottom: 0;
+  }
+}
+body.zachandemily .navbar-default {
+  background-color: transparent;
+  border: none;
+}
+body.zachandemily .navbar-default .navbar-nav>li>a {
+  color: #979797;
   font-size: 16px;
   text-transform: uppercase;
   padding-left: 16px;
@@ -23,7 +61,7 @@ body.zachandemily a:hover {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-a:hover > .headerlink {
+body.zachandemily .navbar-default .navbar-nav>li>a:hover {
   color: #b59148;
   background-color: #f5f6f8;
 }

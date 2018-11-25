@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Navbar, Nav } from 'react-bootstrap';
 
-const HeaderLink = ({ to, children }) => (
-  <Link to={to}>
-    <div className="headerlink">
+const NavItem = ({ href, children }) => (
+  <li role="presentation">
+    <Link to={href}>
       {children}
-    </div>
-  </Link>
+    </Link>
+  </li>
 )
 
 const Header = ({ siteTitle }) => (
@@ -37,36 +37,33 @@ const Header = ({ siteTitle }) => (
         </h1>
       </Col>
       <Col xs={12}>
-        <div style={{
-          display: 'flex',
-          flex: 1,
-          flexDirection: 'row',
-          alignItems: 'center',
-          marginBottom: '36px'
-        }}>
-          <div style={{
-            width: '100%',
-            background: '#d0d0d0',
-            height: '1px',
-            marginRight: '16px'
-          }} />
-          <div style={{
-            whiteSpace: 'nowrap'
-          }}>
-            <HeaderLink to='/'>Home</HeaderLink>
-            <HeaderLink to='/our-story'>Our Story</HeaderLink>
-            <HeaderLink to='/the-party'>The Party</HeaderLink>
-            <HeaderLink to='/travel'>Travel</HeaderLink>
-            <HeaderLink to='/rsvp'>RSVP</HeaderLink>
-            <HeaderLink to='/registry'>Registry</HeaderLink>
-          </div>
-          <div style={{
-            width: '100%',
-            background: '#d0d0d0',
-            height: '1px',
-            marginLeft: '16px'
-          }} />
-        </div>
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <div style={{
+              width: '100%',
+              background: '#d0d0d0',
+              height: '1px',
+              marginRight: '16px'
+            }} />
+            <Nav>
+              <NavItem href="/">Home</NavItem>
+              <NavItem href="/our-story">Our Story</NavItem>
+              <NavItem href="/the-party">The Party</NavItem>
+              <NavItem href="/travel">Travel</NavItem>
+              <NavItem href="/rsvp">RSVP</NavItem>
+              <NavItem href="/registry">Registry</NavItem>
+            </Nav>
+            <div style={{
+              width: '100%',
+              background: '#d0d0d0',
+              height: '1px',
+              marginLeft: '16px'
+            }} />
+          </Navbar.Collapse>
+        </Navbar>
       </Col>
     </Row>
   </Grid>
