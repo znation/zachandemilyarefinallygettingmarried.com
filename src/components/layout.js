@@ -27,16 +27,12 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+          <body className="zachandemily" />
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+          <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Quattrocento+Sans" rel="stylesheet" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
+        <div>
           {children}
         </div>
       </>

@@ -1,7 +1,20 @@
 html {
-  font-family: sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+body.zachandemily {
+  color: #d2d2d2;
+}
+body.zachandemily a {
+  color: #d2d2d2;
+}
+body.zachandemily a:hover {
+  /* turn off underline */
+  text-decoration: none;
+}
+.cursive {
+  font-family: 'Dancing Script', cursive;
 }
 body {
   margin: 0;
@@ -183,7 +196,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em 'Quattrocento Sans', serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -198,7 +211,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Quattrocento Sans', serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
