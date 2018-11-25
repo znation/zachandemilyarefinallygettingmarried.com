@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { Grid } from 'react-bootstrap';
 
 import Header from './header'
 import './layout.css'
@@ -32,9 +33,9 @@ const Layout = ({ children }) => (
           <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Quattrocento+Sans" rel="stylesheet" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
+        <Grid>
           {children}
-        </div>
+        </Grid>
       </>
     )}
   />

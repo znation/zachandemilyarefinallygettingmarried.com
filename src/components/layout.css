@@ -1,8 +1,10 @@
-html { font-family: 'Quattrocento Sans', sans-serif;
+html {
+  font-family: 'Quattrocento Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body.zachandemily {
+  font-family: 'Quattrocento Sans', sans-serif;
   color: #979797;
 }
 body.zachandemily a {
@@ -14,7 +16,7 @@ body.zachandemily a:hover {
 }
 .headerlink {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   padding-left: 16px;
   padding-right: 16px;

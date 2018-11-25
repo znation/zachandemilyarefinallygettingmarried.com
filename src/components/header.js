@@ -40,7 +40,8 @@ const Header = ({ siteTitle }) => (
           display: 'flex',
           flex: 1,
           flexDirection: 'row',
-          alignItems: 'center'
+          alignItems: 'center',
+          marginBottom: '48px'
         }}>
           <div style={{
             width: '100%',
