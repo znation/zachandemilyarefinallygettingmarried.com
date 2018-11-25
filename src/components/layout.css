@@ -1,17 +1,29 @@
-html {
-  font-family: 'Quattrocento Sans', sans-serif;
+html { font-family: 'Quattrocento Sans', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body.zachandemily {
-  color: #d2d2d2;
+  color: #979797;
 }
 body.zachandemily a {
-  color: #d2d2d2;
+  color: #979797;
 }
 body.zachandemily a:hover {
   /* turn off underline */
   text-decoration: none;
+}
+.headerlink {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+a:hover > .headerlink {
+  color: #b59148;
+  background-color: #f5f6f8;
 }
 .cursive {
   font-family: 'Dancing Script', cursive;
