@@ -16,7 +16,8 @@ const Header = ({ siteTitle }) => (
       <Col xs={12}
            style={{
              textAlign: 'center',
-             marginBottom: '16px'
+             marginTop: '24px',
+             marginBottom: '12px'
            }}>
         <h1>
           <Link
@@ -41,7 +42,7 @@ const Header = ({ siteTitle }) => (
           flex: 1,
           flexDirection: 'row',
           alignItems: 'center',
-          marginBottom: '48px'
+          marginBottom: '36px'
         }}>
           <div style={{
             width: '100%',

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { Row, Col } from 'react-bootstrap';
 
 import Layout from '../components/layout'
@@ -10,13 +9,68 @@ const IndexPage = () => (
     <Row>
       <Col xs={8} xsOffset={2}>
         <div style={{
-          border: '1px solid #cfcfd0'
+          paddingLeft: 36,
+          paddingRight: 36
         }}>
-          <Image />
+          <div style={{
+            border: '1px solid #cfcfd0',
+            marginBottom: '30px'
+          }}>
+            <Image />
+          </div>
+        </div>
+      </Col>
+    </Row>
+    <Row>
+      <Col xs={12}>
+        <div style={{
+          display: 'flex',
+          flex: 1,
+          flexDirection: 'row',
+          alignItems: 'center',
+          marginBottom: '4px'
+        }}>
+          <div style={{
+            width: '100%',
+            background: '#d0d0d0',
+            height: '1px',
+            marginRight: '16px'
+          }} />
+          <div className="cursive" style={{
+            whiteSpace: 'nowrap',
+            fontSize: '36px',
+            color: '#76b3b8',
+            paddingLeft: '20px',
+            paddingRight: '20px'
+          }}>
+            Come celebrate with us!
+          </div>
+          <div style={{
+            width: '100%',
+            background: '#d0d0d0',
+            height: '1px',
+            marginRight: '16px'
+          }} />
         </div>
       </Col>
       <Col xs={12}>
-        Footer-like thing goes here
+          <div style={{
+            textTransform: 'uppercase',
+            fontSize: '16px'
+          }}>
+            <div style={{
+              width: '100%',
+              textAlign: 'center'
+            }}>
+              Seattle, Washington
+            </div>
+            <div style={{
+              width: '100%',
+              textAlign: 'center'
+            }}>
+              Sunday, August 25, 2019
+            </div>
+          </div>
       </Col>
     </Row>
   </Layout>
