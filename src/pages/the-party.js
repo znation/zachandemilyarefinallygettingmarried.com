@@ -1,30 +1,6 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import { PageLayout } from '../components/layout'
-
-const Image = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        fullImage: file(relativePath: { eq: "pavillionmosiac.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Img fluid={data.fullImage.childImageSharp.fluid} style={{
-        width: "100%",
-        marginBottom: 20
-      }}/>
-    )}
-  />
-)
 
 const SecondPage = () => (
   <PageLayout>
@@ -39,7 +15,6 @@ const SecondPage = () => (
       Please join us for cocktail hour on the roof, followed by a family style dinner prepared by local
       restaurant Stoneburner, and then pie and cake. And games. Lots of games.
     </p>
-    <Image />
     <iframe
       title="Map to Venue"
       width="100%"
