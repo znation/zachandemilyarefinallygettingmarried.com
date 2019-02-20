@@ -9,6 +9,7 @@ body.zachandemily {
 }
 body.zachandemily a {
   color: #979797;
+  text-decoration: underline;
 }
 body.zachandemily a:hover {
   /* turn off underline */
