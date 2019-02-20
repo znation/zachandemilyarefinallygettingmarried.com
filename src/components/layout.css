@@ -15,6 +15,14 @@ body.zachandemily a:hover {
   /* turn off underline */
   text-decoration: none;
 }
+body.zachandemily .navbar a {
+  /* turn off underline */
+  text-decoration: none;
+}
+body.zachandemily .header a {
+  /* turn off underline */
+  text-decoration: none;
+}
 body.zachandemily .navbar-default .navbar-toggle {
   float: none;
   margin-left: auto;

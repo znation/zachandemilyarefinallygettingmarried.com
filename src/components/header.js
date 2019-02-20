@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
              marginTop: '24px',
              marginBottom: '12px'
            }}>
-        <h1>
+        <h1 className="header">
           <Link
             to="/"
           >
