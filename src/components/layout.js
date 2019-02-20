@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
           <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Quattrocento+Sans" rel="stylesheet" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Grid>
+        <Grid style={{marginBottom: 100}}>
           {children}
         </Grid>
       </>
