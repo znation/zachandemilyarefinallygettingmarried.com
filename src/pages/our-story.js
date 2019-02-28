@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap';
-import { Link } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -14,6 +13,27 @@ const Heading = (props) => (
   }}>
     {props.children}
   </h2>
+)
+
+const EmilyPhoto = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        emily: file(relativePath: { eq: "Emily.jpg" }) {
+          childImageSharp {
+            fixed(width: 150, height: 200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div style={{width: '100%', textAlign: 'center'}}>
+        <Img fixed={data.emily.childImageSharp.fixed} />
+      </div>
+    )}
+  />
 )
 
 const ImageRow = () => (
@@ -73,6 +93,7 @@ const SecondPage = () => (
         <Heading>How we first met:</Heading>
         <p><strong>Emily:</strong> I saw Zach pop up as one of my highest matches on a dating website. It turns out my roommate Ashley went to high school with him and also thought we'd be a good match, so I messaged him (after scouring his livejournal and web history, of course).</p>
         <p><strong>Zach:</strong> On OkCupid. Emily had artistic and non-traditional profile pictures. I had long hair.</p>
+        <p><EmilyPhoto /></p>
       </Col>
       <Col xs={12}>
         <Heading>Our first date:</Heading>
