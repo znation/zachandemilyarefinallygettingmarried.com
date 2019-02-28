@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import { PageLayout } from '../components/layout'
 
 const SecondPage = () => (
   <PageLayout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <h1>RSVP</h1>
+    <p>We'll be sending out paper invitations in early June and will have a special link to RSVP online. Until then, here's a cute photo of our cat, Seven!</p>
+    <p>
+    </p>
   </PageLayout>
 )
 
