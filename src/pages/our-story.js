@@ -23,21 +23,21 @@ const ImageRow = () => (
         riker: file(relativePath: { eq: "rikergroom.png" }) {
           childImageSharp {
             fluid(maxWidth: 480) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         },
         ezri: file(relativePath: { eq: "ezribride.png" }) {
           childImageSharp {
             fluid(maxWidth: 480) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         },
         heart: file(relativePath: { eq: "heart.png" }) {
           childImageSharp {
             fixed(width: 120, height: 111) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_noBase64
             }
           }
         }
