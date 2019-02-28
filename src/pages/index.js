@@ -1,8 +1,14 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
+
+function playAudio() {
+  var el = document.getElementById("nextgen");
+  el.play();
+  el.controls = true;
+}
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +22,18 @@ const IndexPage = () => (
             <Image />
           </div>
         </div>
+        <p style={{textAlign: 'center'}}>
+          <a href="javascript:" onClick={playAudio}>
+            ♫ Click me! ♫
+          </a>
+        </p>
+        <p style={{textAlign: 'center'}}>
+          <audio id="nextgen">
+            <source src="nextgen.webm" type="audio/webm" />
+            <source src="nextgen.ogg" type="audio/ogg" />
+            <source src="nextgen.wav" type="audio/wav" />
+          </audio>
+        </p>
       </Col>
     </Row>
     <Row>
