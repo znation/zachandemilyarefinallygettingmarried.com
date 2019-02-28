@@ -26,6 +26,13 @@ const SecondPage = () => (
             }
           }
         },
+        zach: file(relativePath: { eq: "Zach.jpg" }) {
+          childImageSharp {
+            fixed(width: 150, height: 200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        },
         riker: file(relativePath: { eq: "rikergroom.png" }) {
           childImageSharp {
             fluid(maxWidth: 480) {
@@ -74,7 +81,8 @@ const SecondPage = () => (
             <p><strong>Emily:</strong> I saw Zach pop up as one of my highest matches on a dating website. It turns out my roommate Ashley went to high school with him and also thought we'd be a good match, so I messaged him (after scouring his livejournal and web history, of course).</p>
             <p><strong>Zach:</strong> On OkCupid. Emily had artistic and non-traditional profile pictures. I had long hair.</p>
             <div style={{width: '100%', textAlign: 'center', marginBottom: 16}}>
-              <Img fixed={data.emily.childImageSharp.fixed} />
+              <Img fixed={data.emily.childImageSharp.fixed} style={{marginRight: 10}}/>
+              <Img fixed={data.zach.childImageSharp.fixed} />
             </div>
           </Col>
           <Col xs={12}>
