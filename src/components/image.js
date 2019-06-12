@@ -17,17 +17,17 @@ const Image = () => (
   <StaticQuery
     query={graphql`
       query {
-        fullImage: file(relativePath: { eq: "index.png" }) {
+        fullImage: file(relativePath: { eq: "index.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid
+            fluid {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         },
-        croppedImage: file(relativePath: { eq: "index-cropped.png" }) {
+        croppedImage: file(relativePath: { eq: "index-cropped.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid
+            fluid {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
@@ -35,8 +35,8 @@ const Image = () => (
     `}
     render={data => (
       <div>
-        <Img className="main-image-full" fluid={data.fullImage.childImageSharp.fluid} />
-        <Img className="main-image-cropped" fluid={data.croppedImage.childImageSharp.fluid} />
+        <Img className="main-image-full" fluid={data.fullImage.childImageSharp.fluid} fadeIn={false} durationFadeIn={0} critical={true} loading="eager" />
+        <Img className="main-image-cropped" fluid={data.croppedImage.childImageSharp.fluid} fadeIn={false} durationFadeIn={0} critical={true} loading="eager" />
       </div>
     )}
   />
