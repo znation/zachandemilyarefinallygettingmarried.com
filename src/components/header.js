@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Grid, Row, Col, Navbar, Nav } from 'react-bootstrap';
 
-const NavItem = ({ href, children }) => (
+const NavItem = ({ href, children, className }) => (
   <li role="presentation">
-    <Link to={href}>
+    <Link to={href} className={className}>
       {children}
     </Link>
   </li>
@@ -53,7 +53,7 @@ const Header = ({ siteTitle }) => (
               <NavItem href="/our-story">Our Story</NavItem>
               <NavItem href="/the-party">The Party</NavItem>
               <NavItem href="/travel">Travel</NavItem>
-              <NavItem href="/rsvp">RSVP</NavItem>
+              <NavItem href="/rsvp" className="glow">RSVP</NavItem>
               <NavItem href="/registry">Registry</NavItem>
             </Nav>
             <div style={{
