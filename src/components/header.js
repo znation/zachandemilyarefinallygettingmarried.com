@@ -53,7 +53,11 @@ const Header = ({ siteTitle }) => (
               <NavItem href="/our-story">Our Story</NavItem>
               <NavItem href="/the-party">The Party</NavItem>
               <NavItem href="/travel">Travel</NavItem>
-              <NavItem href="/rsvp" className="glow">RSVP</NavItem>
+              <li role="presentation">
+                <a href="https://zachandemilywedding.rsvpify.com" className="glow">
+                  RSVP
+                </a>
+              </li>
               <NavItem href="/registry">Registry</NavItem>
             </Nav>
             <div style={{
